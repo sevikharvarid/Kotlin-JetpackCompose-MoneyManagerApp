@@ -1,0 +1,1 @@
+-keep class com.project.app.moneypal.model.** { *; }

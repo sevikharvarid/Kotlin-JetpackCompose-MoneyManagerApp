@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package com.project.app.moneypal.foundation.datasource.preference.model;
+
+message OnboardingPreference {
+  bool finishOnboarding = 1;
+}

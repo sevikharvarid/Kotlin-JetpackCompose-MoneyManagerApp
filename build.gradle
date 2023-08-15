@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath libs.android.gradlePlugin
+        classpath libs.jetbrains.kotlin.gradlePlugin
+        classpath libs.google.firebase.crashlytics.gradlePlugin
+        classpath libs.google.firebase.performance.gradlePlugin
+        classpath libs.google.hilt.gradlePlugin
+        classpath libs.google.servicesPlugin
+        classpath libs.squareup.wire.gradlePlugin
+    }
+}
+
+allprojects {
+    project.ext {
+        minSdkVersion = 21
+        targetSdkVersion = 33
+        compileSdkVersion = 33
+        buildToolsVersion = "33.0.0"
+        appId = project.properties["application_id"]
+        versionCode = Integer.parseInt(project.properties["version_code"])
+        versionName = project.properties["version_name"]
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+
